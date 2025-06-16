@@ -42,3 +42,7 @@ reservation-hotel/
 - Créer un vrai envoi de données en utilisant PHP et une base de données
 - Améliorer la page d'accueil en incluant toutes les informations sur l'hotel et ses offres 
 - Améliorer le responsive sur mobile
+
+  ##  Auteur
+** Graichi hemama **  
+ GitHub:https://github.com/hemamagr
