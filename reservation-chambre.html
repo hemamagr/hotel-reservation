@@ -1,0 +1,130 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservation-chambre.css">
+    <title>reservation</title>
+</head>
+<body>
+    <h1 class="title">Votre Chambre:</h1>
+    <div class="gallery-container">
+        <div class="galery">
+            <div class="image1"><img src="./images/chambre1.jpg" alt=""></div>
+            <div class="image2"><img src="./images/chambre2.jpg" alt=""></div>
+            <div class="image3"><img src="./images/chambre3.jfif" alt=""></div>
+            <div class="image4"><img src="./images/chambre4.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="dis-container">
+        <h2 class="dis-title">Description</h2>
+        <p>Une chambre confortable idéale pour un séjour court ou professionnel. Elle est équipée d’un lit double, d’une salle de bain privative, d’un bureau de travail et d’une connexion Wi-Fi haut débit. Décor moderne et ambiance chaleureuse.</p>
+    
+    </div>
+
+    <div class="car-container">
+        <h2 class="car-title">caractéristique</h2>
+        <div class="section-container">
+            <div class="section1">
+                <div class="addons">
+                    <div class="cercle"></div>
+                    <p>Climatisation réglable dans la chambre</p>
+                </div>
+
+                <div class="addons">
+                    <div class="cercle"></div>
+                    <p>Plateau thé/café</p>
+                </div>
+                <div class="addons">
+                    <div class="cercle"></div>
+                    <p>Fer et planche à repasser (sur demande)</p>
+                </div>
+                
+            </div>
+            <div class="section2">
+                <div class="addons">
+                    <div class="cercle"></div>
+                    <p>Climatisation réglable dans la chambre</p>
+                </div> 
+                <div class="addons">
+                    <div class="cercle"></div>
+                    <p>Plateau thé/café</p>
+                </div>
+                <div class="addons">
+                    <div class="cercle"></div>
+                    <p>Fer et planche à repasser (sur demande)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-container">
+             
+
+        
+        <button class="btn-reserver" data-room="Type Standard">Choisir</button>
+
+        
+        
+        <a href="reservation-type.html" class="btn-retour">Retour</a>
+    </div>
+     
+    
+
+  <div class="reservation-modal" id="reservationModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Réserver une chambre</h2>
+    <form id="reservationForm">
+      <input type="hidden" id="roomType" name="roomType">
+      <label for="name">Nom complet</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="checkin">Date d’arrivée</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Date de départ</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <button type="submit">Confirmer la réservation</button>
+    </form>
+  </div>
+  </div>
+
+  <script>
+  var modal = document.getElementById('reservationModal');
+  var closeBtn = document.querySelector('.close-modal');
+  var form = document.getElementById('reservationForm');
+  var roomTypeInput = document.getElementById('roomType');
+
+  var reserverButtons = document.querySelectorAll('.btn-reserver');
+  for (var i = 0; i < reserverButtons.length; i++) {
+    reserverButtons[i].addEventListener('click', function() {
+      var room = this.getAttribute('data-room');
+      roomTypeInput.value = room;
+      modal.style.display = 'block';
+    });
+  }
+  closeBtn.onclick = () => modal.style.display = 'none';
+
+  form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Empêche le rechargement de la page
+  alert("Réservation confirmée ! Merci " + form.name.value + " 😊");
+  modal.style.display = 'none'; // Ferme la modal après confirmation
+  form.reset(); // Réinitialise le formulaire
+});
+
+
+  
+  
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

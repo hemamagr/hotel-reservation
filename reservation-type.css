@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tr-title{
+    text-align:center; 
+    font-size: 1.3em; 
+    margin-bottom: 20px;  
+}
+p {
+    margin: 10px 0;
+    font-size: .9em;
+}
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.type-frame {
+    width:75%;
+    height: 150px;
+    color:#fff;
+    font-weight: bold;
+    background-color: rgba(0,0,0,.4);
+    padding:5px;
+    position: relative;
+}
+.btn-consulter {
+    position: relative;
+    right: .5em;
+    bottom: .5em;
+    top: 15px;
+    padding: 10px;
+    background-color: #D2691E;
+    color:#fff;
+    font-size: 15px;
+    border-radius: 20px;
+}
+.btn-consulter:hover{
+    background-color: #ff9549;
+    padding:1em;
+    -webkit-box-shadow: 1px 6px 14px -3px #000000; 
+    box-shadow: 1px 6px 14px -3px #000000;
+}
+
+.btn-accueil{
+    position: relative;
+    right: .5em;
+    bottom: 10px;
+    top:    19em;
+    padding: 13px;
+    background-color: #9eeeab;
+    color:black;
+    font-size: 15px;
+    border-radius: 20px;
+    font-weight: bold;
+
+}
+.btn-accueil:hover{
+    background-color: #62a16c;
+    padding:1em;
+    -webkit-box-shadow: 1px 6px 14px -3px #000000; 
+    box-shadow: 1px 6px 14px -3px #000000;
+}
+.type-container:hover {
+    width:380px;
+    height: 330px;
+    -webkit-box-shadow: 1px 6px 14px -3px #000000; 
+    box-shadow: 1px 6px 14px -3px #000000;
+}
+
+@media (min-width:715px){
+    .tr-title{
+        margin-bottom: 80px;
+    }
+    .cards-container{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .type-container {
+        width:400px;
+        height: 380px;
+    }
+    .type-container:hover {
+        width:400px;
+        height: 410px;
+        -webkit-box-shadow: 1px 6px 14px -3px #000000; 
+        box-shadow: 1px 6px 14px -3px #000000;
+    }
+}
+
+
+.cards-container{
+    margin-top: -100px;
+}
+.cards-container .contenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.cards-container .contenu .image{
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    
+    box-shadow: 20px 15px 35px rgba(0,0,0, 0.8);
+}
+
+
+.contenu .image img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.contenu .type-frame {
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+}
